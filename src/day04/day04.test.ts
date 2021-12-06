@@ -1,7 +1,7 @@
 import assert from "assert";
 import { part1, part2 } from "./day04";
 
-describe("Day 04", () => {
+describe("Day 4", () => {
     describe("Part 1", () => {
         it("Example should return 4512", () => {
             assert.strictEqual(part1("day04/example.txt"), 4512);
