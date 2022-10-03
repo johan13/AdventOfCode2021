@@ -7,7 +7,7 @@ export default function fileParser<T>(
 ) {
     return (filePath: string) =>
         readFileSync(resolve(__dirname, "..", filePath), "utf8")
-            .trimRight()
+            .trimEnd()
             .split(separator)
             .map(parser);
 }

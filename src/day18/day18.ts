@@ -32,7 +32,7 @@ function add(left: Token[], right: Token[]) {
 
 function reduce(tokens: Token[]) {
     while (true) {
-        let oldTokens = tokens;
+        const oldTokens = tokens;
         tokens = explode(tokens);
         if (tokens === oldTokens) {
             tokens = split(tokens);

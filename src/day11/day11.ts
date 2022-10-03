@@ -1,7 +1,7 @@
 import { fileParser } from "../common";
 
 export function part1(filePath: string) {
-    let map = fileParser(line => line.split("").map(Number))(filePath);
+    const map = fileParser(line => line.split("").map(Number))(filePath);
     let flashes = 0;
     for (let i = 0; i < 100; i++) {
         doOneStep(map);
@@ -14,7 +14,7 @@ export function part1(filePath: string) {
 }
 
 export function part2(filePath: string) {
-    let map = fileParser(line => line.split("").map(Number))(filePath);
+    const map = fileParser(line => line.split("").map(Number))(filePath);
     for (let i = 1; ; i++) {
         doOneStep(map);
         if (map.every(row => row.every(x => x === 0))) {
